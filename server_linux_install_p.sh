@@ -91,7 +91,7 @@ ARCH=$(uname -m)
 [ -f /etc/os-release ] && . /etc/os-release || log_error "OS detection failed."
 
 if [ "$ARCH" = "aarch64" ] || [ "$ARCH" = "arm64" ]; then
-    URL="https://github.com/masterking32/MasterDnsVPN/releases/latest/download/MasterDnsVPN_Server_Linux_ARM64.zip"
+    URL="https://github.com/masterking32/MasterDnsVPN/releases/download/v2026.03.14.195032-8972eb0/MasterDnsVPN_Server_Linux_ARM64.zip"
     PREFIX="MasterDnsVPN_Server_Linux_ARM64"
 elif [ "$ARCH" = "x86_64" ]; then
     LEGACY=0
@@ -100,10 +100,10 @@ elif [ "$ARCH" = "x86_64" ]; then
 
     if [ $LEGACY -eq 1 ]; then
         log_info "Legacy system detected (GLIBC compatibility mode)."
-        URL="https://github.com/masterking32/MasterDnsVPN/releases/latest/download/MasterDnsVPN_Server_Linux-Legacy_AMD64.zip"
+        URL="https://github.com/masterking32/MasterDnsVPN/releases/download/v2026.03.14.195032-8972eb0/MasterDnsVPN_Server_Linux-Legacy_AMD64.zip"
         PREFIX="MasterDnsVPN_Server_Linux-Legacy_AMD64"
     else
-        URL="https://github.com/masterking32/MasterDnsVPN/releases/latest/download/MasterDnsVPN_Server_Linux_AMD64.zip"
+        URL="https://github.com/masterking32/MasterDnsVPN/releases/download/v2026.03.14.195032-8972eb0/MasterDnsVPN_Server_Linux_AMD64.zip"
         PREFIX="MasterDnsVPN_Server_Linux_AMD64"
     fi
 else
